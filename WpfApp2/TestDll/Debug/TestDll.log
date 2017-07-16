@@ -1,0 +1,5 @@
+﻿D:\Microsoft\Microsoft Visual Studio 17.0\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(373,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  TestDll.cpp
+     Creating library ..\bin\Debug\TestDll.lib and object ..\bin\Debug\TestDll.exp
+  TestDll.vcxproj -> F:\编程学习资料\WPF练习\WpfApp2\TestDll\..\bin\Debug\TestDll.dll
+  TestDll.vcxproj -> ..\bin\Debug\TestDll.pdb (Partial PDB)
