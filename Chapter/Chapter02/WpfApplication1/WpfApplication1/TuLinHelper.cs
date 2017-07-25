@@ -32,7 +32,5 @@ namespace WpfApplication1
             }
             return "调用无消息";
         }
-
-      
     }
 }

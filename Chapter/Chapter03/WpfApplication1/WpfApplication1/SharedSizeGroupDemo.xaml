@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApplication1.SharedSizeGroupDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="SharedSizeGroupDemo" Height="300" Width="300">
+    <Grid Grid.IsSharedSizeScope="True" Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="3" Background="LightYellow" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="TextLabel"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Margin="5">下面的第一列跟我一起走</Label>
+             <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="10"></GridSplitter>
+            <Label Grid.Column="2" Margin="5">耶耶</Label>
+            <TextBox Grid.Column="3" Margin="5">哈哈</TextBox>
+        </Grid>
+        <Label Grid.Row="1" >两个Grid之间分水岭</Label>
+        <Grid Grid.Row="2" Margin="3" Background="LightYellow"  ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="TextLabel"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Margin="5">我跟上面的第一列一起走,,,,,,,,,,,,,,</Label>
+            <TextBox Grid.Column="1" Margin="5">呵呵</TextBox>
+        </Grid>
+        <UniformGrid Rows="2" Columns="3">
+        </UniformGrid>
+    </Grid>
+</Window>
